@@ -6,7 +6,7 @@ require "ruflow/version"
 Gem::Specification.new do |spec|
   spec.name          = "ruflow"
   spec.version       = Ruflow::VERSION
-  spec.authors       = ["Victor Palomo"]
+  spec.authors       = ["victor95pc"]
   spec.email         = ["victorpalomocastro@gmail.com"]
 
   spec.summary       = %q{Create flow-based programs using Ruby.}
