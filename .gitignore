@@ -13,3 +13,4 @@
 .ruby-gemset
 .ruby-version
 Gemfile.lock
+/spec/dumb
