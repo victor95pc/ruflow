@@ -1,15 +1,16 @@
-require "thor"
+require_relative 'setup'
 
 module Ruflow
   module Tasks
     class Base < Thor
-      desc "new", "generate a new project"
+      desc "new  [PROJECT_NAME]", "generate a new project"
       def new(project_name)
-        puts "I'm a thor task! #{project_name}"
+        Ruflow::Tasks::Setup.start([project_name])
       end
 
+      desc "setup", "generate all files and folder required"
       def setup
-        puts "Run Run"
+        Ruflow::Tasks::Setup.start(['.'])
       end
     end
   end
