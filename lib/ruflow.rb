@@ -1,4 +1,5 @@
 require "ruflow/version"
+require "ruflow/type_checker"
 require "configurations"
 
 module Ruflow
