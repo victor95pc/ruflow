@@ -14,3 +14,4 @@
 .ruby-version
 Gemfile.lock
 /spec/dumb
+.byebug_history
