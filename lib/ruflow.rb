@@ -2,6 +2,7 @@ require "configurations"
 
 require "ruflow/version"
 require "ruflow/type_checker"
+require "ruflow/action"
 
 require "ruflow/error/bad_return"
 require "ruflow/error/mismatch_input_type"
