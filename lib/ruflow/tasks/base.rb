@@ -11,7 +11,14 @@ module Ruflow
 
       desc "start [FLOW_CLASS_NAME]", "Start a flow"
       def start(flow_klass_name)
-        Kernel.const_get(flow_klass_name).start
+        _file_path = "#{Dir.pwd}/ruflow_config"
+
+        if File.exist?("#{_file_path}.rb")
+          require _file_path
+          Kernel.const_get(flow_klass_name).start
+        else
+          puts "ruflow_config.rb not found on #{Dir.pwd}"
+        end
       end
 
       desc "setup", "Generate all files and folder required"
