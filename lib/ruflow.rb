@@ -1,4 +1,5 @@
 require "configurations"
+require 'require_all'
 
 require "ruflow/version"
 require "ruflow/type_checker"
@@ -23,6 +24,9 @@ module Ruflow
 
     def setup(&block)
       Ruflow.configure(&block)
+
+      autoload_all "#{Dir.pwd}/#{config.components_folder}/actions"
+      autoload_all "#{Dir.pwd}/#{config.components_folder}/flows"
     end
   end
 end
