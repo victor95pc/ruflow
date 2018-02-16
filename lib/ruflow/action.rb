@@ -6,7 +6,7 @@ module Ruflow
       alias_method :set_options, :options=
 
       def change_options(_options = {})
-        self.options = (options || {}).merge(_options)
+        self.options = options.merge(_options)
       end
 
       def with_custom_options(_options = {})
@@ -36,6 +36,10 @@ module Ruflow
 
       def input_type
         options[:input]
+      end
+
+      def options
+        @options || ::Ruflow::Action.options
       end
 
       private
