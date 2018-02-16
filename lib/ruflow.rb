@@ -1,6 +1,12 @@
+require "configurations"
+
 require "ruflow/version"
 require "ruflow/type_checker"
-require "configurations"
+
+require "ruflow/error/bad_return"
+require "ruflow/error/mismatch_input_type"
+require "ruflow/error/mismatch_output_type"
+require "ruflow/error/output_port_not_defined"
 
 module Ruflow
   include Configurations
