@@ -38,6 +38,10 @@ module Ruflow
         options[:input]
       end
 
+      def output_ports
+        options[:output]
+      end
+
       def options
         @options || ::Ruflow::Action.options
       end
@@ -60,7 +64,7 @@ module Ruflow
         _output_port = options[:output][output_port]
 
         if _output_port.nil? || _output_port.empty?
-          raise Error::OutputPortNotDefined.new(_output_port)
+          raise Error::OutputPortNotDefined.new(output_ports.keys, _output_port)
         end
       end
 

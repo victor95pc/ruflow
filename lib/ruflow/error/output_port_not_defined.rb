@@ -1,8 +1,8 @@
 module Ruflow
   module Error
     class OutputPortNotDefined < StandardError
-      def initialize(return_value)
-        super("Expected start method to return [:<<output_port>>, <<value>>], but returned #{return_value}")
+      def initialize(output_ports, output_port)
+        super("Output port (#{output_port}) not defined, ports defined are: #{output_ports.join(', ')}")
       end
     end
   end
